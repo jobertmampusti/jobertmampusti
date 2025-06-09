@@ -1,11 +1,11 @@
 function Header() {
   return (
-    <header className="text-white flex justify-between items-center py-6 mx-16">
+    <header className="mx-16 flex items-center justify-between py-6 text-white">
       {/* left section */}
       <p className="text-2xl font-bold">TreBojx</p>
       {/* right section */}
-      <div className="flex items-center w-2xl justify-between">
-        <nav className="text-xl flex justify-around w-lg">
+      <div className="flex w-2xl items-center justify-between">
+        <nav className="flex w-lg justify-around text-xl">
           <a href="" className="hover:text-blue-400">
             Home
           </a>
@@ -22,7 +22,7 @@ function Header() {
             Contact
           </a>
         </nav>
-        <button className="bg-blue-600 font-bold text-xl px-6 py-2 rounded-full cursor-pointer hover:bg-blue-800">
+        <button className="cursor-pointer rounded-full bg-blue-600 px-6 py-2 text-xl font-bold hover:bg-blue-800">
           Resume
         </button>
       </div>

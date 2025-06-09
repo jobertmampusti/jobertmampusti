@@ -1,9 +1,9 @@
-import Header from "./components/Header";
+import Header from './components/Header';
 // import Home from "./components/Home";
 
 function App() {
   return (
-    <div className="bg-gray-900 min-h-screen">
+    <div className="min-h-screen bg-gray-900">
       <Header />
       {/* <Home /> */}
     </div>
