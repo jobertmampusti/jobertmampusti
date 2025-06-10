@@ -1,18 +1,23 @@
+import { BriefcaseBusiness, GraduationCap } from 'lucide-react';
+
 const experiences = [
   {
     title: 'BS in Information Technology',
     company: 'Polytechnic University of the Philippines, 2023-2025',
     description: 'Degree Awarded with Cum Laude',
+    type: 'education',
   },
   {
     title: 'Frontend Web Developer Intern',
     company: 'Unified Internship Incorporated, 2023',
     description: 'Developed Responsive Web Page Layouts',
+    type: 'work',
   },
   {
     title: 'Diploma in Information Technology',
     company: 'Polytechnic University of the Philippines, 2020-2023',
     description: 'With Hands on Experience in OJT',
+    type: 'education',
   },
 ];
 
@@ -42,7 +47,10 @@ function About() {
           {/* BSIT */}
           {experiences.map((experience) => (
             <article className="mb-10 flex">
-              <div className="mt-1 mr-3 h-8 w-8 rounded-full bg-blue-900/30"></div>
+              <div className="mt-1 mr-3 flex h-8 w-8 items-center justify-center rounded-full bg-blue-900/30">
+                {experience.type === 'education' && <GraduationCap color="#60A5FA" size={20} />}
+                {experience.type === 'work' && <BriefcaseBusiness color="#60A5FA" size={20} />}
+              </div>
               <div>
                 <p className="text-lg font-bold">{experience.title}</p>
                 <div className="text-gray-300">

@@ -1,18 +1,25 @@
+import { ExternalLink } from 'lucide-react';
+import { Github } from 'lucide-react';
+
 const projects = [
   {
     title: 'E-commerce Dashboard',
     info: 'A responsive dashboard for online stores with sales analytics, inventory management, and order processing features.',
     stacks: ['React', 'TypeScript', 'Chart.js', 'Tailwind CSS'],
+    repo: 'https://github.com/jobertmampusti/portfolio',
   },
   {
     title: 'Task Management App',
     info: 'A productivity app that helps users organize tasks, set priorities, and track progress with a clean, intuitive interface.',
     stacks: ['React', 'Redux', 'Firebase', 'Material UI'],
+    repo: 'https://github.com/jobertmampusti/portfolio',
   },
   {
     title: 'Portfolio Website',
     info: 'A personal portfolio website showcasing skills, projects, and professional information with a modern design.',
     stacks: ['HTML', 'CSS', 'JavaScript', 'GSAP'],
+    link: 'https://portfolio-six-khaki-16.vercel.app',
+    repo: 'https://github.com/jobertmampusti/portfolio',
   },
 ];
 
@@ -39,20 +46,30 @@ function Projects() {
                 ))}
               </div>
               <div className="mt-3 flex text-[11px] font-bold">
-                <a href="" className="mr-4 text-blue-300 hover:underline">
-                  <p>Live Demo</p>
-                </a>
-                <a href="" className="hover:underline">
-                  <p>GitHub</p>
-                </a>
+                {project.link && (
+                  <a href={project.link} className="mr-4 flex items-center text-blue-400 hover:text-blue-300">
+                    <ExternalLink size={16} className="mr-1" />
+                    <p>Live Demo</p>
+                  </a>
+                )}
+                {project.repo && (
+                  <a href={project.repo} className="flex items-center hover:text-gray-300">
+                    <Github size={16} className="mr-1" />
+                    <p>GitHub</p>
+                  </a>
+                )}
               </div>
             </div>
           </article>
         ))}
       </div>
-      <button className="mt-6 cursor-pointer rounded-full bg-gray-700 px-6 py-3 hover:bg-gray-600">
-        View More on GitHub
-      </button>
+      <a
+        href="https://github.com/jobertmampusti"
+        className="mt-6 flex items-center rounded-full bg-gray-700 px-6 py-3 font-bold hover:bg-gray-600"
+      >
+        <ExternalLink size={20} />
+        <p className="ml-2">View More on GitHub</p>
+      </a>
     </section>
   );
 }

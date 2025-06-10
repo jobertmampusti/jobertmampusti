@@ -2,7 +2,7 @@ function Home() {
   return (
     <section className="flex flex-col py-30 text-center text-white">
       <h1 className="text-5xl/16 font-bold">
-        Hi, I'm Jobert<br></br> A Web Developer
+        Hi, I'm Jobert!<br></br> A Web Developer
       </h1>
       <div className="mt-3 text-xl/8">
         <p>I craft responsive websites where technology meets creativity.</p>
