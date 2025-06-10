@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <header className="mx-36 flex items-center justify-between py-6 text-white">
+    <header className="sticky top-0 mx-36 flex items-center justify-between bg-gray-900 py-6 text-white">
       <h1 className="text-2xl font-bold">TreBojx</h1>
       <div className="flex w-2xl items-center justify-between">
         <nav>
