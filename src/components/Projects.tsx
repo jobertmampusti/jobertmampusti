@@ -3,21 +3,21 @@ import { Github } from 'lucide-react';
 
 const projects = [
   {
-    title: 'E-commerce Dashboard',
-    info: 'A responsive dashboard for online stores with sales analytics, inventory management, and order processing features.',
-    stacks: ['React', 'TypeScript', 'Chart.js', 'Tailwind CSS'],
-    repo: 'https://github.com/jobertmampusti/portfolio',
+    title: 'AgriCTRL+',
+    info: 'AgriCTRL+ is a web platform for the NFA, digitizing rice supply chain tracking from procurement to distribution with real-time updates.',
+    stacks: ['React', 'Express', 'Tailwind CSS', 'ICP'],
+    link: 'https://agrictrl.online',
   },
   {
-    title: 'Task Management App',
-    info: 'A productivity app that helps users organize tasks, set priorities, and track progress with a clean, intuitive interface.',
-    stacks: ['React', 'Redux', 'Firebase', 'Material UI'],
-    repo: 'https://github.com/jobertmampusti/portfolio',
+    title: 'CRUD with JWT auth',
+    info: 'A boilerplate for efficient CRUD operations, reinforced with JWT for secure, token-based authorization and streamlined data management.',
+    stacks: ['Node', 'Express', 'MongoDB', 'JWT'],
+    repo: 'https://github.com/jobertmampusti/express-mongodb-jwt',
   },
   {
     title: 'Portfolio Website',
     info: 'A personal portfolio website showcasing skills, projects, and professional information with a modern design.',
-    stacks: ['HTML', 'CSS', 'JavaScript', 'GSAP'],
+    stacks: ['React', 'TypeScript', 'Tailwind CSS', 'Lucide'],
     link: 'https://portfolio-six-khaki-16.vercel.app',
     repo: 'https://github.com/jobertmampusti/portfolio',
   },
@@ -47,13 +47,17 @@ function Projects() {
               </div>
               <div className="mt-3 flex text-[11px] font-bold">
                 {project.link && (
-                  <a href={project.link} className="mr-4 flex items-center text-blue-400 hover:text-blue-300">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    className="mr-4 flex items-center text-blue-400 hover:text-blue-300"
+                  >
                     <ExternalLink size={16} className="mr-1" />
                     <p>Live Demo</p>
                   </a>
                 )}
                 {project.repo && (
-                  <a href={project.repo} className="flex items-center hover:text-gray-300">
+                  <a href={project.repo} target="_blank" className="flex items-center hover:text-gray-300">
                     <Github size={16} className="mr-1" />
                     <p>GitHub</p>
                   </a>
@@ -65,6 +69,7 @@ function Projects() {
       </div>
       <a
         href="https://github.com/jobertmampusti"
+        target="_blank"
         className="mt-6 flex items-center rounded-full bg-gray-700 px-6 py-3 font-bold hover:bg-gray-600"
       >
         <ExternalLink size={20} />
