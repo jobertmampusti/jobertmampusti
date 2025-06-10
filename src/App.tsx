@@ -1,11 +1,11 @@
 import Header from './components/Header';
-// import Home from "./components/Home";
+import Home from './components/Home';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="flex h-screen flex-col bg-gray-900">
       <Header />
-      {/* <Home /> */}
+      <Home />
     </div>
   );
 }
