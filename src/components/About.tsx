@@ -18,9 +18,9 @@ const experiences = [
 
 function About() {
   return (
-    <section className="mx-36 flex justify-between py-20 text-white">
+    <section className="flex justify-between px-36 py-20 text-white">
       {/* left section */}
-      <div className="w-125">
+      <div className="w-49/100">
         <h1 className="text-3xl font-bold">About Me</h1>
         <div className="text-justify text-lg/8">
           <p className="mt-4">
@@ -35,7 +35,7 @@ function About() {
         </div>
       </div>
       {/* right section */}
-      <div className="w-120 rounded-xl bg-gray-800 p-5 pb-12">
+      <div className="w-47/100 rounded-xl bg-gray-800 p-5">
         <h1 className="text-xl font-bold">Education & Experience</h1>
         {/* container */}
         <div className="mt-5">

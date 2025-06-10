@@ -28,21 +28,31 @@ function Projects() {
       </div>
       <div className="mt-8 flex w-full justify-between px-36">
         {projects.map((project) => (
-          <article className="w-80 rounded-xl bg-gray-900">
+          <article className="w-78 rounded-xl bg-gray-900">
             <div className="h-40 rounded-t-xl bg-white"></div>
             <div className="p-4">
               <h1 className="text-lg font-bold">{project.title}</h1>
               <p className="mt-1">{project.info}</p>
-              <div className="mt-3 flex w-full text-[11px] text-blue-300">
+              <div className="mt-3 flex w-full text-[10px] text-blue-300">
                 {project.stacks.map((stack) => (
-                  <p className="mr-2 rounded-full bg-blue-900/30 px-2 py-1">{stack}</p>
+                  <p className="mr-2 rounded-full bg-blue-900/30 px-2 py-1 font-bold">{stack}</p>
                 ))}
+              </div>
+              <div className="mt-3 flex text-[11px] font-bold">
+                <a href="" className="mr-4 text-blue-300 hover:underline">
+                  <p>Live Demo</p>
+                </a>
+                <a href="" className="hover:underline">
+                  <p>GitHub</p>
+                </a>
               </div>
             </div>
           </article>
         ))}
       </div>
-      <button className="mt-6 rounded-full bg-gray-700 px-6 py-3">View More on GitHub</button>
+      <button className="mt-6 cursor-pointer rounded-full bg-gray-700 px-6 py-3 hover:bg-gray-600">
+        View More on GitHub
+      </button>
     </section>
   );
 }
