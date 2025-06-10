@@ -1,10 +1,10 @@
 function Home() {
   return (
     <section className="flex flex-col items-center py-18 text-center text-white">
-      <h1 className="text-5xl leading-16 font-bold">
+      <h1 className="text-5xl/16 font-bold">
         Hi, I'm TreBojx <br></br> A Web Developer
       </h1>
-      <div className="mt-3 text-xl leading-8">
+      <div className="mt-3 text-xl/8">
         <p>I craft responsive websites where technology meets creativity.</p>
         <p>Fresh graduate with a passion for building digital experiences.</p>
       </div>
