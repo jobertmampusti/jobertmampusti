@@ -1,4 +1,5 @@
 import { BriefcaseBusiness, GraduationCap } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const experiences = [
   {
@@ -23,9 +24,14 @@ const experiences = [
 
 function About() {
   return (
-    <section className="flex justify-between px-36 py-20 text-white">
+    <section id="about" className="flex scroll-m-20 justify-between px-36 py-20 text-white">
       {/* left section */}
-      <div className="w-49/100">
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        className="w-49/100"
+      >
         <h1 className="text-3xl font-bold">About Me</h1>
         <div className="text-justify text-lg/8">
           <p className="mt-4">
@@ -38,9 +44,14 @@ function About() {
             and methodologies to stay at the forefront of web development.
           </p>
         </div>
-      </div>
+      </motion.div>
       {/* right section */}
-      <div className="w-47/100 rounded-xl bg-gray-800 p-5">
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        className="w-47/100 rounded-xl bg-gray-800 p-5"
+      >
         <h1 className="text-xl font-bold">Education & Experience</h1>
         {/* container */}
         <div className="mt-5">
@@ -61,7 +72,7 @@ function About() {
             </article>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

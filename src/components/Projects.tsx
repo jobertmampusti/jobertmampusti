@@ -1,5 +1,6 @@
 import { ExternalLink } from 'lucide-react';
 import { Github } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const projects = [
   {
@@ -25,15 +26,25 @@ const projects = [
 
 function Projects() {
   return (
-    <section className="flex flex-col items-center bg-gray-800 py-20 text-white">
-      <div className="text-center">
+    <section id="projects" className="flex scroll-m-20 flex-col items-center bg-gray-800 py-20 text-white">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        className="text-center"
+      >
         <h1 className="text-3xl font-bold">My Projects</h1>
         <h2 className="mt-4 w-140 text-lg/8">
           Here are some of the projects I've worked on. Each project reflects my skills in different technologies and my
           approach to problem-solving.
         </h2>
-      </div>
-      <div className="mt-8 flex w-full justify-between px-36">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        className="mt-8 flex w-full justify-evenly px-36"
+      >
         {projects.map((project) => (
           <article className="w-78 rounded-xl bg-gray-900">
             <div className="h-40 rounded-t-xl bg-white"></div>
@@ -66,15 +77,21 @@ function Projects() {
             </div>
           </article>
         ))}
-      </div>
-      <a
-        href="https://github.com/jobertmampusti"
-        target="_blank"
-        className="mt-6 flex items-center rounded-full bg-gray-700 px-6 py-3 font-bold hover:bg-gray-600"
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
       >
-        <ExternalLink size={20} />
-        <p className="ml-2">View More on GitHub</p>
-      </a>
+        <a
+          href="https://github.com/jobertmampusti"
+          target="_blank"
+          className="mt-6 flex items-center rounded-full bg-gray-700 px-6 py-3 font-bold hover:bg-gray-600"
+        >
+          <ExternalLink size={20} />
+          <p className="ml-2">View More on GitHub</p>
+        </a>
+      </motion.div>
     </section>
   );
 }

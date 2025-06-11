@@ -7,7 +7,7 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="flex min-h-screen flex-col bg-gray-900">
+    <div className="flex min-h-screen flex-col scroll-smooth bg-gray-900">
       <Header />
       <Home />
       <About />

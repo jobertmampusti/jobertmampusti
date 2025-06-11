@@ -1,4 +1,5 @@
 import { Settings, Globe, Database, Wrench } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const skills = [
   {
@@ -21,15 +22,25 @@ const skills = [
 
 function Skills() {
   return (
-    <section className="flex flex-col items-center py-20 text-white">
-      <div className="text-center">
+    <section id="skills" className="flex scroll-m-20 flex-col items-center py-20 text-white">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        className="text-center"
+      >
         <h1 className="text-3xl font-bold">Skills & Technologies</h1>
         <h2 className="mt-4 w-140 text-lg/8">
           As a fresh graduate, I've developed a diverse set of skills through coursework, internships, and personal
           projects.
         </h2>
-      </div>
-      <div className="mt-12 flex w-full justify-between px-36">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        className="mt-12 flex w-full justify-evenly px-36"
+      >
         {skills.map((skill) => (
           <article className="flex w-60 flex-col items-center rounded-xl bg-gray-800 p-4 text-center">
             <div className="my-4 flex h-14 w-14 items-center justify-center rounded-full bg-blue-900/30">
@@ -42,7 +53,7 @@ function Skills() {
             <p>{skill.stacks}</p>
           </article>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
