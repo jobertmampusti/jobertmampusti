@@ -25,7 +25,7 @@ const experiences = [
 function About() {
   return (
     <section id="about" className="flex min-h-screen scroll-m-20 items-center px-50 text-white">
-      <div className="flex justify-between">
+      <div className="-mt-20 flex justify-between">
         {/* left section */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}

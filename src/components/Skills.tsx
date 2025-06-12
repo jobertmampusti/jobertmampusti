@@ -22,7 +22,7 @@ const skills = [
 
 function Skills() {
   return (
-    <section id="skills" className="flex min-h-screen flex-col items-center justify-center text-white">
+    <section id="skills" className="flex min-h-screen flex-col items-center justify-center py-20 text-white">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}

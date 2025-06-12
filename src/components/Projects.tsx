@@ -28,7 +28,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="flex min-h-screen scroll-m-10 flex-col items-center justify-center bg-gray-800 text-white"
+      className="flex min-h-screen scroll-m-10 flex-col items-center justify-center bg-gray-800 py-20 text-white"
     >
       <motion.div
         initial={{ opacity: 0, y: -20 }}
