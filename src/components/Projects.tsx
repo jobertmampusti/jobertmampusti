@@ -26,7 +26,10 @@ const projects = [
 
 function Projects() {
   return (
-    <section id="projects" className="flex scroll-m-20 flex-col items-center bg-gray-800 py-20 text-white">
+    <section
+      id="projects"
+      className="flex min-h-screen scroll-m-10 flex-col items-center justify-center bg-gray-800 text-white"
+    >
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -43,12 +46,12 @@ function Projects() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: 'easeOut' }}
-        className="mt-8 flex w-full justify-evenly px-36"
+        className="mt-8 flex w-full justify-center space-x-10 px-36"
       >
         {projects.map((project) => (
           <article className="w-78 rounded-xl bg-gray-900">
-            <div className="h-40 rounded-t-xl bg-white"></div>
-            <div className="p-4">
+            <div className="h-45 rounded-t-xl bg-white"></div>
+            <div className="p-5">
               <h1 className="text-lg font-bold">{project.title}</h1>
               <p className="mt-1">{project.info}</p>
               <div className="mt-3 flex w-full text-[10px] text-blue-300">
@@ -86,7 +89,7 @@ function Projects() {
         <a
           href="https://github.com/jobertmampusti"
           target="_blank"
-          className="mt-6 flex items-center rounded-full bg-gray-700 px-6 py-3 font-bold hover:bg-gray-600"
+          className="mt-8 flex items-center rounded-full bg-gray-700 px-6 py-3 font-bold hover:bg-gray-600"
         >
           <ExternalLink size={20} />
           <p className="ml-2">View More on GitHub</p>

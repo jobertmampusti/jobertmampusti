@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <header className="sticky top-0 z-1000 flex h-20 items-center justify-between bg-gray-900 px-36 text-white">
+    <header className="sticky top-0 z-1000 flex h-20 items-center justify-between bg-gray-900 px-50 text-white">
       <h1 className="text-2xl font-bold">Jobert</h1>
       <div className="flex w-2xl items-center justify-between">
         <nav>

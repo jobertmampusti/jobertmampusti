@@ -22,7 +22,7 @@ const skills = [
 
 function Skills() {
   return (
-    <section id="skills" className="flex scroll-m-20 flex-col items-center py-20 text-white">
+    <section id="skills" className="flex min-h-screen flex-col items-center justify-center text-white">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ function Skills() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: 'easeOut' }}
-        className="mt-12 flex w-full justify-evenly px-36"
+        className="mt-12 flex w-full justify-center space-x-10 px-36"
       >
         {skills.map((skill) => (
           <article className="flex w-60 flex-col items-center rounded-xl bg-gray-800 p-4 text-center">
