@@ -1,0 +1,93 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root,
+.dark {
+  --background: 240 20% 4%;
+  --foreground: 210 40% 98%;
+  --muted: 240 10% 12%;
+  --muted-foreground: 215 20% 65%;
+  --border: 240 10% 15%;
+  --input: 240 10% 15%;
+  --ring: 217 91% 60%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 240 10% 12%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 240 10% 12%;
+  --accent-foreground: 210 40% 98%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+.cursor-glow-stage {
+  position: relative;
+  isolation: isolate;
+}
+
+.cursor-glow-stage::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 28rem;
+  height: 28rem;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.16) 0%, rgba(59, 130, 246, 0) 60%);
+  transform: translate(calc(var(--cursor-x, 50vw) - 50%), calc(var(--cursor-y, 50vh) - 50%));
+  filter: blur(8px);
+  transition: transform 80ms linear;
+}
+
+.cursor-glow-target {
+  position: relative;
+  overflow: hidden;
+}
+
+.cursor-glow-target::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms ease;
+  background: radial-gradient(220px circle at var(--mx, 50%) var(--my, 50%), rgba(59, 130, 246, 0.25), rgba(59, 130, 246, 0) 45%);
+}
+
+.cursor-glow-target:hover::after {
+  opacity: 1;
+}
