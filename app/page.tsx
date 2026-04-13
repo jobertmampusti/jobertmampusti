@@ -110,6 +110,14 @@ export default function Home() {
     const handleScroll = () => {
       const sections = ["home", ...portfolioData.sections];
       const scrollPosition = window.scrollY + 100;
+      const scrollBottom = window.scrollY + window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+
+      // If the user is at (or very near) the bottom of the page, highlight the last section
+      if (scrollBottom >= docHeight - 50) {
+        setActiveSection(sections[sections.length - 1]);
+        return;
+      }
 
       for (const section of sections) {
         const element = document.getElementById(section);
