@@ -91,3 +91,10 @@
 .cursor-glow-target:hover::after {
   opacity: 1;
 }
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-glow-stage::before,
+  .cursor-glow-target::after {
+    display: none;
+  }
+}

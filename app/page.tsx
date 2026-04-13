@@ -127,6 +127,11 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    const canUseCursorGlow = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    if (!canUseCursorGlow) {
+      return;
+    }
+
     const root = document.documentElement;
 
     const handleWindowMouseMove = (event: MouseEvent) => {
